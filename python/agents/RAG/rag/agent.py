@@ -47,10 +47,14 @@ ask_vertex_retrieval = VertexAiRagRetrieval(
 
 with using_session(session_id=uuid.uuid4()):
     root_agent = Agent(
-        model='gemini-2.0-flash-001',
-        name='ask_rag_agent',
+        model='gemini-2.5-pro',
+        name='cpt_reading_agent',
         instruction=return_instructions_root(),
         tools=[
             ask_vertex_retrieval,
         ]
+        # Note: generation_config for media_resolution/thinking_level 
+        # would be passed here if supported by the ADK Agent class directly,
+        # or configured via the model object if instantiated separately.
+        # For now, we rely on the model name and system instructions.
     )

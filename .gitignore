@@ -223,3 +223,14 @@ bin/
 
 # ADK
 .adk/
+
+# RAG Agent specific ignores
+python/agents/RAG/source/
+python/agents/RAG/archive/
+python/agents/RAG/gcloud/
+# python/agents/RAG/cpt_*.json
+# python/agents/RAG/cpt_*.jsonl
+# python/agents/RAG/*.csv
+# python/agents/RAG/*.txt
+# python/agents/RAG/pyproject copy.toml
+python/agents/RAG/.env
